@@ -8,3 +8,18 @@ header {
 .row {
   padding: 0 1.25rem;
 }
+
+.col-sm-12 {
+font-family: UniSansHeavy;
+}
+
+main{
+  min-height: 100vh;
+}
+
+
+form{
+font-size:20pt;
+}
+
+/*.box {width:400px;height:500px;border:1px solid #000;}*/
