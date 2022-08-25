@@ -7,10 +7,11 @@ const { connect } = require('http2');
 const path = require('path');
 const { errors, queryResult } = require('pg-promise');
 const { isNull } = require('util');
+const { randomInt } = require('crypto');
 const pgp = require('pg-promise')();
 const db = pgp({
-  connectionString: process.env.DATABASE_URL//,
- // ssl: { rejectUnauthorized: false }
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 const PORT = process.env.PORT || 5000
 const saltRounds = 10;
@@ -22,6 +23,7 @@ db.query("CREATE TABLE IF NOT EXISTS users ( \
 );
 // DEVELOPERS SHOULD ADD CODE HERE
 
+let imageArray = ['images\\Q1.png','images\\Q2.png','images\\Q3.png','images\\Q4.png']
 
 
 // DEVELOPERS CODE ENDS HERE
@@ -30,11 +32,13 @@ app.use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   // ROUTING EXAMPLES
-  .get('/', (req, res) => res.render('pages/index', { title: 'Home' }))
+  .get('/', (req, res) => res.render('pages/index', { title: 'Home', image_src: null  }))
   .get('/help', (req, res) => res.render('pages/help', { title: 'Help' }))
   // ROUTING STARTS HERE
-  .post('/',  (req, res) => {
-    
+  .post('/generate',  (req, res) => {
+    let i=randomInt(imageArray.length)
+    res.render('pages/index', { title: 'Question', image_src: imageArray[i]})
+
   })
 
 

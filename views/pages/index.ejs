@@ -9,26 +9,31 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-       <div class="questions-box"></div> 
-        <button class="Generate" action="/" method="post">Generate</button><br><br>
-        <button class="leaderboards">Leaderboards</button>
+       <div class="questions-box">
+                 
+        <% if (image_src) { %>
+          <img src="<%= image_src %>" />
+         <% } %>
+       </div> 
+        <form action="/generate" method="post">
+          <button class="Generate" type="submit">Generate</button>
+          <label for="Answer">Answer</label>
+          <input class="Answer" type="text" id="Answer" name="Answer">
+        
+          <br><br>
+        </form>
+        
         <html>
 <body><br>
   <!--<input type="text" name="lname"/> </form> </body> </html>--> 
   <style> 
     input {
-      width: 100%;
+      width: 15%;
     }
     </style>
     </head>
     <body>
     
-    
-    
-    <form>
-      <label for="fname">Answer</label>
-      <input type="text" id="fname" name="fname">
-    </form>
 
 
 
