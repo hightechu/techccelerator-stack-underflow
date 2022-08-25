@@ -33,7 +33,9 @@ app.use(express.static(path.join(__dirname, 'public')))
   .get('/', (req, res) => res.render('pages/index', { title: 'Home' }))
   .get('/help', (req, res) => res.render('pages/help', { title: 'Help' }))
   // ROUTING STARTS HERE
-
+  .post('/',  (req, res) => {
+    
+  })
 
 
   // ROUTING ENDS HERE
@@ -66,7 +68,7 @@ auth.get('/login', (req, res) => res.render('pages/auth/login', { title: 'Login'
 auth.post('/login', async (req, res) => {
   await loginUser(req.body.username, req.body.password).then((user) => {
     if (user) {
-      res.send(`Successfully logged in as ${user.username}`)
+      res.redirect('../')
     } else {
       res.send("The username and password provided do not match our records.")
     }
@@ -91,7 +93,7 @@ async function registerUser(username, password) {
 auth.get('/register', (req, res) => res.render('pages/auth/register', { title: 'Register' }))
 auth.post('/register', async (req, res) => {
   if (await registerUser(req.body.username, req.body.password)) {
-    res.send(`User "${req.body.username}" has been created.`)
+    res.redirect('/auth/login')
   } else {
     res.send(`User "${req.body.username}" already exists.`)
   }

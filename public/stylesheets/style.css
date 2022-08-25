@@ -23,3 +23,36 @@ font-size:20pt;
 }
 
 /*.box {width:400px;height:500px;border:1px solid #000;}*/
+
+body {
+  background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/82/44/z3mx7o.jpg");
+}
+
+.questions-box {margin-top:150px;width:700px;height: 200px;border:1px solid #000;background-color: #fafaff;}
+
+button.Generate {
+  background-color: #85bdbf;
+  border-style: solid;
+  border-width: medium;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;}
+
+
+  button.leaderboards{
+  background-color: #85bdbf;
+  border-style: solid;
+  border-width: medium;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;}
