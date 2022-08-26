@@ -26,26 +26,26 @@ db.query("CREATE TABLE IF NOT EXISTS users ( \
 
 let imageArray = 
 [
-  ['images\\Q1.png', 'e' ],
-['images\\Q2.png', 'd' ],
-['images\\Q3.png', 'e' ],
-['images\\Q4.png', 'c' ],
-['images\\p-11-2021.png', 'b'],
-['images\\p-12-2021.png', 'e'],
-['images\\p-13-2021.png', 'b'],
-['images\\p-14-2021.png', 'a'],
-['images\\p-15-2021.png', 'e'],
-['images\\p-16-2021.png', 'c'],
-['images\\p-17-2021.png', 'c'],
-['images\\p-18-2021.png', 'a'],
-['images\\p-19-2021.png', 'b'],
-['images\\p-20-2021.png', 'e'],
-['images\\p-11-2022.png', 'c'],
-['images\\p-12-2022.png', 'c'],
-['images\\p-13-2022.png', 'd'],
-['images\\p-14-2022.png', 'b'],
-['images\\p-15-2022.png', 'a'],
-['images\\p-16-2022.png', 'c']
+  ['images/Q1.png', 'e' ],
+['images/Q2.png', 'd' ],
+['images/Q3.png', 'e' ],
+['images/Q4.png', 'c' ],
+['images/p-11-2021.png', 'b'],
+['images/p-12-2021.png', 'e'],
+['images/p-13-2021.png', 'b'],
+['images/p-14-2021.png', 'a'],
+['images/p-15-2021.png', 'e'],
+['images/p-16-2021.png', 'c'],
+['images/p-17-2021.png', 'c'],
+['images/p-18-2021.png', 'a'],
+['images/p-19-2021.png', 'b'],
+['images/p-20-2021.png', 'e'],
+['images/p-11-2022.png', 'c'],
+['images/p-12-2022.png', 'c'],
+['images/p-13-2022.png', 'd'],
+['images/p-14-2022.png', 'b'],
+['images/p-15-2022.png', 'a'],
+['images/p-16-2022.png', 'c']
 ]
 
 
