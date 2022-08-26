@@ -23,7 +23,7 @@ db.query("CREATE TABLE IF NOT EXISTS users ( \
 );
 // DEVELOPERS SHOULD ADD CODE HERE
 
-let imageArray = ['images\\Q1.png','images\\Q2.png','images\\Q3.png','images\\Q4.png','images\\p-11-2021.png','images\\p-12-2021.png','images\\p-13-2021.png','images\\p-14-2021.png','images\\p-15-2021.png','images\\p-16-2021.png','images\\p-17-2021.png','images\\p-18-2021.png','images\\p-19-2021.png','images\\p-20-2021.png','images\\p-11-2022.png','images\\p-12-2022.png','images\\p-13-2022.png','images\\p-14-2022.png','images\\p-15-2022.png','images\\p-16-2022.png']
+let imageArray = ['images\\Q1.png','images\\Q2.png','images\\Q3.png','images\\Q4.png']
 
 
 // DEVELOPERS CODE ENDS HERE
