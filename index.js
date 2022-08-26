@@ -10,11 +10,12 @@ const { isNull } = require('util');
 const { randomInt } = require('crypto');
 const pgp = require('pg-promise')();
 const db = pgp({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  connectionString: process.env.DATABASE_URL//,
+  //ssl: { rejectUnauthorized: false }
 });
 const PORT = process.env.PORT || 5000
 const saltRounds = 10;
+var i;
 
 // DATABASE CONFIG
 db.query("CREATE TABLE IF NOT EXISTS users ( \
@@ -23,7 +24,29 @@ db.query("CREATE TABLE IF NOT EXISTS users ( \
 );
 // DEVELOPERS SHOULD ADD CODE HERE
 
-let imageArray = ['images\\Q1.png','images\\Q2.png','images\\Q3.png','images\\Q4.png','images\\p-11-2021.png','images\\p-12-2021.png','images\\p-13-2021.png','images\\p-14-2021.png','images\\p-15-2021.png','images\\p-16-2021.png','images\\p-17-2021.png','images\\p-18-2021.png','images\\p-19-2021.png','images\\p-20-2021.png','images\\p-11-2022.png','images\\p-12-2022.png','images\\p-13-2022.png','images\\p-14-2022.png','images\\p-15-2022.png','images\\p-16-2022.png']
+let imageArray = 
+[
+  ['images\\Q1.png', 'e' ],
+['images\\Q2.png', 'd' ],
+['images\\Q3.png', 'e' ],
+['images\\Q4.png', 'c' ],
+['images\\p-11-2021.png', 'b'],
+['images\\p-12-2021.png', 'e'],
+['images\\p-13-2021.png', 'b'],
+['images\\p-14-2021.png', 'a'],
+['images\\p-15-2021.png', 'e'],
+['images\\p-16-2021.png', 'c'],
+['images\\p-17-2021.png', 'c'],
+['images\\p-18-2021.png', 'a'],
+['images\\p-19-2021.png', 'b'],
+['images\\p-20-2021.png', 'e'],
+['images\\p-11-2022.png', 'c'],
+['images\\p-12-2022.png', 'c'],
+['images\\p-13-2022.png', 'd'],
+['images\\p-14-2022.png', 'b'],
+['images\\p-15-2022.png', 'a'],
+['images\\p-16-2022.png', 'c']
+]
 
 
 // DEVELOPERS CODE ENDS HERE
@@ -32,13 +55,16 @@ app.use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   // ROUTING EXAMPLES
-  .get('/', (req, res) => res.render('pages/index', { title: 'Home', image_src: null  }))
-  .get('/help', (req, res) => res.render('pages/help', { title: 'Help' }))
+  .get('/', (req, res) => res.render('pages/index', { title: 'Home', image_src: null, answer:null }))
+  .get('/leaderboard', (req, res) => res.render('pages/leaderboard', { title: 'Leaderboard' }))
   // ROUTING STARTS HERE
   .post('/generate',  (req, res) => {
-    let i=randomInt(imageArray.length)
-    res.render('pages/index', { title: 'Question', image_src: imageArray[i]})
+    i=randomInt(imageArray.length)
+    res.render('pages/index', { title: 'Question', image_src: imageArray[i][0], answer: null })
 
+  })
+  .post('/reveal', (req, res) => {
+    res.render('pages/index', { title: 'Question', image_src: imageArray[i][0], answer: imageArray[i][1] })
   })
 
 

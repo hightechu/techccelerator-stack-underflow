@@ -1,6 +1,12 @@
 
   <%- include('../partials/head'); %>
 
+  <style> 
+    input {
+      width: 15%;
+    }
+    </style>
+
 <header>
   <%- include('../partials/nav'); %>
 </header>
@@ -17,35 +23,30 @@
        </div> 
         <form action="/generate" method="post">
           <button class="Generate" type="submit">Generate</button>
-          <label for="Answer">Answer</label>
-          <input class="Answer" type="text" id="Answer" name="Answer">
-        
-          <br><br>
-        </form>
-        
-        <html>
-<body><br>
-  <!--<input type="text" name="lname"/> </form> </body> </html>--> 
-  <style> 
-    input {
-      width: 15%;
-    }
-    </style>
-    </head>
-    <body>
-    
-
-
-
-</body>
-</html> 
+           
           
-      
-        <center><p>
-        </p></center>
-
+           
+          
+                     
+          
+        </form>
+        <label for="Answer" class="answer">Answer</label>
+        <input class="Answer" type="text" id="Answer" name="Answer">
+        <form action="/reveal" method="post">
+          <button class="reveal-answer" type="submit">Reveal answer</button>
+          <div class="print-answer">
+            <% if (answer) { %>
+            <%= answer %>
+           <% } %></div>
+        </form><br>
+        <button class="Reveal-solution" type="submit">Reveal solution</button>
+        <a href="/Leaderboard"><button class="Leaderboards" type="submit">Leaderboards</button></a>
+        <button class="Saved-questions" type="submit">Saved questions</button>
+        <button class="Daily-question" type="submit">Daily question</button>
+        
       </div>
     </div>
+  </div>
   </div>
 </main>
 
