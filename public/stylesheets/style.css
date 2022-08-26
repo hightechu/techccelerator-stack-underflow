@@ -35,8 +35,8 @@ body {  font-family: 'IBM Plex Sans', sans-serif;
 
 .questions-box {margin-top:100px;width:700px;height: 350px;border:1px solid #000;background-color: #ffffff;}
 
-button.Generate,.Answer {
-  background-color: #3ad0d6;
+button.Generate,.Reveal-solution,.Answer,.Leaderboards,.Saved-questions,.Daily-question,.reveal-answer {
+  background-color: #4fd9de;
   border-style: solid;
   border-width: medium;
   border-color: #000;
@@ -50,6 +50,79 @@ button.Generate,.Answer {
   cursor: pointer;}
 
 
+  #container {
+    width: 600px;
+    height: auto;
+  }
+  
+  .row {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+  
+  .name {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    line-height: 45px;
+    border-bottom: 1px solid #AFAFAF;
+  }
+  
+  .score {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    line-height: 45px;
+    border-bottom: 1px solid #AFAFAF;
+  }
+
+.question {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  line-height: 45px;
+  border-bottom: 1px solid #AFAFAF;
+}
 
 
+  .year {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    line-height: 45px;
+    border-bottom: 1px solid #AFAFAF;
+  }
+
+
+
+form {
+  display: inline-block;
+}
+
+.print-answer{
+  background-color: #4fd9de;
+  border-style: solid;
+  border-width: medium;
+  border-color: #000;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;}
+
+  .answer{
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;}
+  
   
